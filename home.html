@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orphanage</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/jpg" href="charity.jpg">
+    <style> .chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            z-index: 999;
+        }
+
+        #chat-container {
+            display: none;
+            position: fixed;
+            bottom: 90px; /* Adjust as needed */
+            right: 20px;
+            width: 300px; /* Adjust as needed */
+            background-color: slate blue;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        #chat-container.show-chatbot {
+            display: block;
+        }
+
+        #chat-container .message-container {
+            max-height: 200px; /* Adjust as needed */
+            overflow-y: auto;
+        }
+
+        #chat-container input[type="text"] {
+            width: calc(100% - 20px);
+            margin: 10px;
+            padding: 12px;
+            border: 1px solid coral;
+            border-radius: 25px;
+            outline: none;
+            background-color: fire brick;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        #chat-container input[type="text"]:focus {
+            background-color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Larger box shadow on focus */
+        }
+
+        .bot-message {
+            background-color: #33a1de; /* Change the shade for bot messages */
+        }            </style>
+</head>
+<body>
+    <!-- Your existing HTML content here -->
+
+    <header>
+        <div class="header-content flex-design">
+            <div class="logo">
+                <br><br>
+                <img src="charity.jpg" alt="logo" style="height:55%;">
+            </div>
+            <ul class="nav-links flex-design">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="#">Director</a></li>
+                <li><a href="donor.html">Donor</a></li>
+                <li><a href="donations.html">Donations</a></li>
+                <li><a href="contact.html">Orphanages</a></li>
+            </ul>
+        </div>
+        <div class="text-center">
+            <p> Welcome To</p>
+            <h1>Helping Hands</h1>
+            <a class="btn" href="index.html">Search Here</a>
+        </div>
+    </header>
+    <main>
+        <section class="wwa content mt mb">
+            <div class="heading mb">
+                <h2>Who we Are?</h2>
+            </div> 
+            <div class="wwa-content flex-design">
+                <div class="vision wwa-box">
+                    <h3>Vision</h3>
+                    <p>As orphanages are increasing day by day, Helping Hands aims to reach out to the needy orphans by providing volunteering opportunities. Our platform allows users to search and find orphanages on the internet and make donations according to their preferences.</p>
+                </div>
+                <div class="mission wwa-box">
+                    <h3>Mission</h3>
+                    <p>Our mission is to support orphanages and children in need by connecting them with donors and volunteers. We strive to make a positive impact on the lives of these children by providing them with essential resources and opportunities for a better future.</p>
+                </div>
+                <div class="whoweare wwa-box">
+                    <h3>Who we Are?</h3>
+                    <p>We are a dedicated team committed to making a difference in the lives of orphaned children. Through our platform, we aim to raise awareness about orphanages and facilitate contributions from individuals and organizations to support their cause.</p>
+                </div>
+            </div>
+        </section>
+        <section class="orphanage mt mb">
+            <div class="heading">
+                <h2>Orphanages</h2>
+            </div>
+            <div class="orphanage-content content">
+                <div class="orphanage food">
+                    <div class="orphanage_img">
+                        <img src="food.jpg" alt="food">
+                    </div>
+                    <div class="orphanage_content">
+                        <h3>DONATE FOOD</h3>
+                    </div>
+                </div>
+                <div class="orphanage fund">
+                    <div class="orphanage_img">
+                        <img src="fund.jpeg" alt="fund">
+                    </div>
+                    <div class="orphanage_content">
+                        <h3>DONATE FUND</h3>
+                    </div>
+                </div>
+                <div class="orphanage clothes">
+                    <div class="orphanage_img">
+                        <img src="clothes.jpg" alt="clothes">
+                    </div>
+                    <div class="orphanage_content">
+                        <h3>DONATE CLOTHES</h3>
+                    </div>
+                </div>
+                <div class="orphanage education">
+                    <div class="orphanage_img">
+                        <img src="education.jpeg" alt="education">
+                    </div>
+                    <div class="orphanage_content">
+                        <h3>PROVIDE EDUCATION</h3>
+                    </div>
+                </div>
+                <div class="orphanage place">
+                    <div class="orphanage_img">
+                        <img src="food.jpg" alt="place">
+                    </div>
+                    <div class="orphanage_content">
+                        <h3>PROVIDE PLACE</h3>
+                    </div>
+                </div>
+                <div class="orphanage others">
+                    <div class="orphanage_img">
+                        <img src="others.jpg" alt="others">
+                    </div>
+                    <div class="orphanage_content">
+                        <h3>OTHERS</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-top-container content flex-design">
+                    <div class="footer-logo">
+                        <img src="charity.jpg" alt="logo" style="height: 25%;width:25%;">
+                    </div>
+                    <div class="footer-links">
+                        <br><li><a href="home.html">Home</a></li><br>
+                        <li><a href="aboutus.html">About</a></li><br>
+                        <li><a href="#">Director</a></li><br>
+                        <li><a href="#">Donor</a></li><br>
+                        <li><a href="donations.html">Donations</a></li><br>
+                        <li><a href="contact.html">Orphanages</a></li><br>
+                    </div>
+                    <div class="footer-orphanage">
+                        <h3>Helping Hands</h3>
+                        <p>The main motive is to help orphans to the full extent.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; HH</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Chatbot icon -->
+    <button class="chatbot-icon" onclick="toggleChatbot()">&#129302;</button>
+
+    <!-- Chatbot container -->
+    <div id="chat-container">
+        <div class="message-container">
+            <p class="bot-message">Welcome to our orphanage! How can I assist you today?</p>
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+    </div>
+
+    <script>
+        // Responses based on keywords
+        const responses = {
+            "volunteer": "That's great! We have various volunteer opportunities available. Could you please provide more details about your interests?",
+            "donate": "Thank you for your willingness to donate! Your contribution will make a big difference in the lives of our children. Would you like to know how you can donate?",
+            "adopt": "Adoption is a wonderful way to provide a loving home to a child in need. We can assist you with the adoption process. Would you like more information?",
+            "events": "We regularly organize events to support our cause and engage with the community. You can find more information about our upcoming events on our website.",
+            "sponsor": "Sponsoring a child is a meaningful way to make a positive impact on their life. We can provide you with details on how to become a sponsor.",
+            "feedback": "Your feedback is valuable to us! Please feel free to share your thoughts or suggestions with us.",
+            "hello": "Hello! How can I assist you today?",
+            "hi": "Hi there! What can I do for you?",
+            "bye": "Goodbye! Feel free to reach out to us anytime.",
+            "thank you": "You're welcome! If you need any further assistance, just let me know.",
+            "food": "We accept food donations to ensure that our children have nutritious meals every day. Your support is greatly appreciated!",
+            "clothes": "Donating clothes helps us provide clothing to children in need. Your generosity makes a difference!",
+            "education": "Supporting education initiatives enables us to provide quality education to orphaned children. Your contribution matters!",
+            "shelter": "Donations towards providing shelter ensure that every child has a safe and comfortable place to live. Thank you for your kindness!",
+            "medical": "Contributions towards medical expenses help us provide necessary healthcare services to orphaned children. Your support is invaluable!",
+            "sponsorship": "Becoming a sponsor allows you to make a long-term commitment to supporting a child's well-being. Learn more about our sponsorship program on our website."
+        };
+
+        // Function to toggle the display of the chatbot
+        function toggleChatbot() {
+            const chatContainer = document.getElementById('chat-container');
+            chatContainer.classList.toggle('show-chatbot');
+        }
+
+        // Function to handle user input
+        function handleUserInput() {
+            const userInput = document.getElementById('user-input').value.trim();
+            if (!userInput) return; // Ignore empty input
+            const messageContainer = document.createElement('div');
+            messageContainer.classList.add('message-container');
+            const userMessage = document.createElement('p');
+            userMessage.classList.add('user-message');
+            userMessage.textContent = userInput;
+            messageContainer.appendChild(userMessage);
+            const chatContainer = document.getElementById('chat-container');
+            chatContainer.appendChild(messageContainer);
+
+            // Check if the user input matches any keywords
+            let matchedKeyword = null;
+            for (const keyword in responses) {
+                if (userInput.toLowerCase().includes(keyword)) {
+                    matchedKeyword = keyword;
+                    break;
+                }
+            }
+
+            // Respond based on the matched keyword or provide a default response
+            const botResponse = matchedKeyword ? responses[matchedKeyword] : "I'm sorry, I didn't understand that. How can I assist you?";
+            displayBotMessage(botResponse);
+
+            // Clear the input field
+            document.getElementById('user-input').value = '';
+        }
+
+        // Function to display a message from the bot in the chat container
+        function displayBotMessage(message) {
+            const messageContainer = document.createElement('div');
+            messageContainer.classList.add('message-container');
+            const botMessage = document.createElement('p');
+            botMessage.classList.add('bot-message');
+            botMessage.textContent = message;
+            messageContainer.appendChild(botMessage);
+            const chatContainer = document.getElementById('chat-container');
+            chatContainer.appendChild(messageContainer);
+            // Scroll to the bottom of the chat container
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // Add event listener for pressing Enter key to submit user input
+        document.getElementById('user-input').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                handleUserInput();
+            }
+        });
+    </script>
+</body>
+</html>
